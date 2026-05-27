@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Metonil — Oferta Specjalna</title>
+
+  <!-- Preconnect fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Google Ads / GTM placeholder -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script> -->
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background: #0f0f1a;
+      color: #fff;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px 16px;
+      text-align: center;
+    }
+
+    /* --- BADGE --- */
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #f0c040;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    /* --- LOGO / PRODUCT NAME --- */
+    .product-name {
+      font-size: clamp(42px, 12vw, 72px);
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #fff 40%, #f0c040);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* --- TAGLINE --- */
+    .tagline {
+      font-size: clamp(15px, 3.5vw, 19px);
+      color: rgba(255,255,255,0.65);
+      font-weight: 400;
+      max-width: 360px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    /* --- CTA BUTTON --- */
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #fff;
+      font-size: clamp(16px, 4vw, 20px);
+      font-weight: 700;
+      padding: 18px 44px;
+      border-radius: 10px;
+      text-decoration: none;
+      letter-spacing: 0.2px;
+      box-shadow: 0 0 40px rgba(34,197,94,0.35);
+      transition: transform 0.15s, box-shadow 0.15s;
+      margin-bottom: 20px;
+      animation: glow 2.5s ease-in-out infinite;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 60px rgba(34,197,94,0.55);
+      animation: none;
+    }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 40px rgba(34,197,94,0.35); }
+      50%       { box-shadow: 0 0 60px rgba(34,197,94,0.6);  }
+    }
+
+    /* --- URGENCY LINE --- */
+    .urgency {
+      font-size: 13px;
+      color: #f87171;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      margin-bottom: 32px;
+    }
+
+    .urgency span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #f87171;
+      border-radius: 50%;
+      margin-right: 6px;
+      animation: blink 1s ease infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    /* --- TRUST ROW --- */
+    .trust {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* --- DISCLAIMER --- */
+    .disclaimer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.5);
+      font-size: 10px;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+      padding: 6px 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="badge">⚡ Oferta ograniczona</div>
+
+  <div class="product-name">Metonil</div>
+
+  <p class="tagline">Sprawdź specjalną ofertę dostępną tylko dziś dla mieszkańców Polski.</p>
+
+  <a
+    href="https://abctrack.info/metonil-99/landpl5/?flow=20829&src=23"
+    class="cta-btn"
+    rel="nofollow sponsored"
+    id="cta"
+  >
+    Zobacz ofertę →
+  </a>
+
+  <p class="urgency">
+    <span></span>Zostało kilka miejsc w tej cenie
+  </p>
+
+  <div class="trust">
+    <span>🔒 Bezpieczna płatność</span>
+    <span>📦 Wysyłka w 24h</span>
+    <span>↩ Gwarancja zwrotu</span>
+  </div>
+
+  <div class="disclaimer">Materiał reklamowy. Wyniki mogą się różnić.</div>
+
+  <script>
+    // UTM passthrough
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var keys = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'];
+      var hasAny = keys.some(function(k){ return params.has(k); });
+      if (!hasAny) return;
+      var btn = document.getElementById('cta');
+      try {
+        var url = new URL(btn.href);
+        keys.forEach(function(k){ if (params.has(k)) url.searchParams.set(k, params.get(k)); });
+        btn.href = url.toString();
+      } catch(e) {}
+    })();
+
+    // GA4 / Ads click event placeholder
+    document.getElementById('cta').addEventListener('click', function() {
+      // gtag('event', 'conversion', { send_to: 'AW-XXXXXXXXX/XXXXXXXX' });
+    });
+  </script>
+
+</body>
+</html>
