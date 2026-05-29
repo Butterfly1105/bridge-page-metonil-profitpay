@@ -142,15 +142,18 @@ export default function Home() {
   const utmRef = useRef({});
 
   useEffect(() => {
-    // Geo-redirect: only allow Poland (PL)
-    fetch('https://ipapi.co/json/')
-      .then(r => r.json())
-      .then(data => {
-        if (data && data.country_code && data.country_code !== 'PL') {
-          window.location.replace('https://www.google.com');
-        }
-      })
-      .catch(() => {}); // silently fail — show page if API is down
+    // Geo-redirect: only allow Poland (PL) — bypass with ?preview=1
+    const _preview = new URLSearchParams(window.location.search).get('preview');
+    if (_preview !== '1') {
+      fetch('https://ipapi.co/json/')
+        .then(r => r.json())
+        .then(data => {
+          if (data && data.country_code && data.country_code !== 'PL') {
+            window.location.replace('https://www.google.com');
+          }
+        })
+        .catch(() => {}); // silently fail — show page if API is down
+    }
 
     const p = new URLSearchParams(window.location.search);
     utmRef.current = {
