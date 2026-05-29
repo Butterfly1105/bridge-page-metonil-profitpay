@@ -142,6 +142,16 @@ export default function Home() {
   const utmRef = useRef({});
 
   useEffect(() => {
+    // Geo-redirect: only allow Poland (PL)
+    fetch('https://ipapi.co/json/')
+      .then(r => r.json())
+      .then(data => {
+        if (data && data.country_code && data.country_code !== 'PL') {
+          window.location.replace('https://www.google.com');
+        }
+      })
+      .catch(() => {}); // silently fail — show page if API is down
+
     const p = new URLSearchParams(window.location.search);
     utmRef.current = {
       gclid:        p.get('gclid')        || p.get('subid') || '',
